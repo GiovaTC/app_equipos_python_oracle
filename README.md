@@ -5,6 +5,8 @@
 # Autor: Giovanny & ChatGPT . :.
 # 📌 Ejemplo en Python: Matriz de Equipos de Fútbol con Tkinter y Oracle .
 
+<img width="2548" height="1079" alt="image" src="https://github.com/user-attachments/assets/f290fb41-b385-4d7c-ab4d-c0c18dd41e31" />
+
 Este ejemplo en **Python** utiliza:
 - **Tkinter** para la interfaz gráfica .  
 - **oracledb** para conectarse a Oracle .  
