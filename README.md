@@ -1,0 +1,1 @@
+# app_equipos_python_oracle
