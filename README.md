@@ -1,4 +1,7 @@
 # app_equipos_python_oracle .
+
+<img width="203" height="193" alt="image" src="https://github.com/user-attachments/assets/acd0ce8a-579d-497b-a76e-797430d0bb13" />
+
 # Autor: Giovanny & ChatGPT . :.
 # 📌 Ejemplo en Python: Matriz de Equipos de Fútbol con Tkinter y Oracle .
 
