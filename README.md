@@ -140,7 +140,6 @@ if __name__ == "__main__":
 ✅ Con el botón Cargar desde Oracle, refresca la lista mostrando lo guardado en la BD .
 
 🗄️ Script SQL: insert_equipos.sql
-sql
 
 -- Script para poblar la tabla equipos_futbol con 78 equipos de fútbol
 -- Autor: Giovanny & ChatGPT
