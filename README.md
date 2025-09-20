@@ -5,6 +5,8 @@
 # Autor: Giovanny & ChatGPT . :.
 # 📌 Ejemplo en Python: Matriz de Equipos de Fútbol con Tkinter y Oracle .
 
+<img width="2550" height="1079" alt="image" src="https://github.com/user-attachments/assets/b5f450c5-ebf8-4578-9481-e8f571f963ad" />
+
 <img width="2548" height="1079" alt="image" src="https://github.com/user-attachments/assets/f290fb41-b385-4d7c-ab4d-c0c18dd41e31" />
 
 Este ejemplo en **Python** utiliza:
