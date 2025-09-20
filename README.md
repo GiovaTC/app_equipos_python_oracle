@@ -261,6 +261,22 @@ INSERT INTO equipos_futbol (nombre) VALUES ('Besiktas');
 -- Confirmamos los cambios .
 COMMIT;
 
+📌 Ejecutar el programa Python
+En la terminal, ve a la carpeta donde guardaste app_equipos.py y ejecuta:
+python app_equipos.py
+
+Se abrirá una ventana con Tkinter mostrando:
+Una lista (Listbox) con los equipos .
+
+Botón para agregar nuevos equipos (se guardan en Oracle y aparecen en la lista) .
+Botón para cargar equipos desde Oracle (recarga lo que está en la base) .
+
+📌 5. Flujo de prueba
+al iniciar, la aplicación muestra los equipos iniciales .
+
+si agregas uno nuevo (ejemplo: "Deportivo Pereira"), este se insertará en Oracle .
+si cierras y vuelves a abrir, con el botón "Cargar desde Oracle" se mostrarán todos los equipos, incluyendo los que insertaste manualmente .
+
 📊 Notas
 🔹 Este script inserta 78 equipos de fútbol de Europa y América .
-🔹 Ya está listo para ejecutarse en SQL*Plus, SQL Developer o cualquier cliente Oracle .
+🔹 Ya está listo para ejecutarse en SQL*Plus, SQL Developer o cualquier cliente Oracle .    
