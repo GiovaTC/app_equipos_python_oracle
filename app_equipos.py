@@ -40,3 +40,16 @@ def insertar_equipo(nombre):
     conn.commit()
     cur.close()
     conn.close()
+
+def obtener_equipos():
+    conn = oracledb.connect(user=USER, password=PASSWORD, dsn=DSN)
+    cur = conn.cursor()
+    cur.execute("SELECT nombre FROM equipos_futbol ORDER BY id")
+    equipos =[row[0] for row in cur.fetchall()]
+    cur.close()
+    conn.close()
+    return equipos
+
+# --------------------------
+# Interfaz grafica .
+# --------------------------
