@@ -53,3 +53,62 @@ def obtener_equipos():
 # --------------------------
 # Interfaz grafica .
 # --------------------------
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("matriz de equipos de futbol")
+        self.geometry("400x500")
+
+        #matriz de 78 equipos (se puede cargar de oracle tambien .)
+        self.matriz = [["equipo" + str(i + 1)] for i in range(78)]
+
+        #widgets
+        self.lbl = ttk.Label(self, text = "lista de equipos de futbol (78)")
+        self.lbl.pack(pady=10)
+
+        self.listbox = tk.Listbox(self, height=20, width=40)
+        self.listbox.pack(pady=10)
+
+        self.entry = ttk.Entry(self, width=30)
+        self.entry.pack(pady=5)
+
+        self.btn_add = ttk.Button(self, text="agregar equipo", command=self.agregar_equipo)
+        self.btn_add.pack(pady=5)
+
+        self.btn_load = ttk.Button(self, text="cargar desde oracle", command=self.cargar_oracle)
+        self.btn_load.pack(pady=5)
+
+        self.cargar_matriz()
+    
+    def cargar_matriz(self):
+        """carga la matriz inicial en la Listbox"""
+        self.listbox.delete(0, tk.END)
+        for fila in self.matriz:
+            self.listbox.insert(tk.END, fila[0])
+    
+    def agregar_equipo(self):
+        """agrega un equipo desde la entrada a la matriz oracle ."""
+        nombre = self.entry.get().strip()
+        if nombre:
+            self.matriz.append([nombre])
+            self.listbox.insert(tk.END, nombre)
+            insertar_equipo(nombre)
+            self.entry.delete(0, tk.END)
+            messagebox.showinfo("exito", f"equipo '{nombre}' agregado.")
+        else:
+            messagebox.showwarning("error", "el nombre no puede estar vacio .")
+    
+    def cargar_oracle(self):
+        """cargar desde oracle y refresca la lista"""
+        equipos = obtener_equipos()
+        self.listbox.delete(0, tk.END)
+        for eq in equipos:
+            self.listbox.insert(tk.END, eq)
+
+# --------------------------
+# Main
+# --------------------------
+if __name__ == "__main__":
+    inicializar_bd()
+    app = App()
+    app.mainloop()
